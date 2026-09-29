@@ -6,24 +6,23 @@ import Jogos from "./pages/Jogos"
 import Contato from "./pages/Contato"
 import Login from "./pages/Login"
 import Error from "./pages/Error"
-
-
 const App = () => {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col justify-betweem bg-[#141414] p-1"></div>
-      <div>
-        <Header/>
+    <>
+      <Router>
+        <div className="min-h-screen flex flex-col justify-between bg-[#141414] p-1">
+          <Header />
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/contato" element={<Contato/>}/>
-            <Route path="/jogos" element={<Jogos/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="*" element={<Error/>}/>
-        </Routes>
-        <Footer/>
-      </div>
-    </Router>
+            <Route path="/" element={<Home />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/jogos" element={<Jogos />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </>
   )
 }
 
